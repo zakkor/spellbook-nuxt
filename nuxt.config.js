@@ -1,3 +1,4 @@
+const resolve = require('path').resolve
 const pkg = require('./package')
 
 module.exports = {
@@ -27,7 +28,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/transition.styl'
+    '@/assets/transition.styl'
   ],
 
   /*
@@ -42,9 +43,19 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    // 'nuxt-purgecss'
     '@nuxtjs/axios',
-    'nuxt-purgecss'
+    'nuxt-svg-loader',
+    ['nuxt-stylus-resources-loader', resolve(__dirname, 'assets/spellbook.styl')]
   ],
+
+  svgLoader: {
+    svgoConfig: {
+      plugins: [
+        { prefixIds: false } // Disables prefixing for SVG IDs
+      ]
+    }
+  },
 
   purgeCSS: {
     paths: [
@@ -65,16 +76,9 @@ module.exports = {
   build: {
     analyze: false,
     transpile: [
-      '@grimoire/spellbook/src/styles/spellbook.styl',
+      // '@grimoire/spellbook/src/styles/spellbook.styl',
       '@grimoire/spellbook/src/components'
     ],
-
-    loaders: {
-      stylus: {
-        // data: "@require '~/plugins/variables.styl'",
-        // import: ['~/plugins/variables.styl']
-      }
-    },
 
     extractCSS: true,
 
