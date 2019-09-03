@@ -3,10 +3,14 @@ div
   .hero.pt-10.pb-9.sm-pv-6.gradient-tb-d1-d2
     .container.md-p-6
       .row.wrap
-        .col-8.sm-col-12
+        .col-7.sm-col-12
           h1.mb-7.bold.font-body.text-neutral-l-3 Stylish hand-crafted website designs for the modern age
           h4.mb-10.font-body.text-neutral-l-3
-            | Don't choose between good and cheap - have both.
+            | Beautiful websites
+            br
+            | Elegant web apps
+            br
+            | shit
           //- h4.mb-4.font-body.text-neutral-l-3
           //-   | Incredibly fast load times ensuring people see your content
           //- h4.mb-4.font-body.text-neutral-l-3
@@ -14,11 +18,35 @@ div
 
           a.button.primary.large.m-2.ml-0 Why Grimoire?
           a.button.white.large.m-2 Pricing
-        .col-4.sm-hidden
+        .col-5.sm-hidden
           OrbitingLogos
+
+  //- .hero.pt-10.pb-9.sm-pv-6
+  //-   .container.md-p-6
+  //-     .row.wrap
+  //-       .col-7.sm-col-12
+  //-         h1.mb-7.bold.font-body Stylish hand-crafted website designs for the modern age
+  //-         h4.mb-10.font-body
+  //-           | Beautiful websites
+  //-           br
+  //-           | Elegant web apps
+  //-           br
+  //-           | shit
+  //-         //- h4.mb-4.font-body.text-neutral-l-3
+  //-         //-   | Incredibly fast load times ensuring people see your content
+  //-         //- h4.mb-4.font-body.text-neutral-l-3
+  //-         //-   | Unbeatable prices
+
+  //-         a.button.primary.large.m-2.ml-0 Why Grimoire?
+  //-         a.button.large.m-2 Pricing
+  //-       .col-5.sm-hidden
+  //-         OrbitingLogos
 
   .separator-container(style='overflow: hidden')
     .separator-double-diagonal-lr
+
+  div.text-center
+    SVGChevronDown.icon-chevron
 
   .container.md-p-6
     //- section
@@ -70,11 +98,13 @@ div
 <script>
 import OrbitingLogos from '~/components/OrbitingLogos'
 import SVGDiamond from '~/static/icons/diamond.svg'
+import SVGChevronDown from '~/static/icons/chevron-down.svg'
 
 export default {
   components: {
     OrbitingLogos,
-    SVGDiamond
+    SVGDiamond,
+    SVGChevronDown
   }
 }
 </script>
@@ -82,10 +112,18 @@ export default {
 <style lang="stylus">
 
 .hero
-  height 80vh
+  height 70vh
 
 .icon-diamond .path-border
   fill c-primary-l-1
+
+.icon-chevron
+  width size-7
+  height size-7
+  margin-top size-4
+
+  .path-content
+    fill c-primary-l-1
 
 .section-header
   margin-bottom size-6

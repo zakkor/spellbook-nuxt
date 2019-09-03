@@ -57,8 +57,8 @@
 .footer
   background-color c-neutral-l-3
   // background linear-gradient(180deg, c-neutral-l-3 0%, c-primary-l-1 100%)
-  padding-top size-6
-  padding-bottom size-6
+  padding-top size-8
+  padding-bottom size-9
   border-top 1px solid c-neutral-l-2
   // background-color c-primary-l-2
 
@@ -67,7 +67,7 @@
     font-weight bold
     font-size font-4
     margin-bottom size-3
-    color c-neutral-d-1
+    color c-neutral-d-2
   a
     font-weight 400
     text-decoration none

@@ -43,7 +43,9 @@ orbit-spin-time = 20s
   position relative
   width 500px
   height 500px
-  border: 4px c-primary-d-3 dashed
+  margin-left auto
+  margin-top size-8
+  border: 4px c-primary dashed
   border-radius: 100%
 
   .orbit-icon-1
